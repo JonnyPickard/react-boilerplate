@@ -1,4 +1,5 @@
 module.exports = {
+  root: true,
   env: {
     browser: true,
     commonjs: true,
@@ -6,11 +7,11 @@ module.exports = {
     node: true
   },
   extends: [
+    'standard',
     'plugin:react/recommended',
     'prettier',
     'prettier/flowtype',
-    'prettier/react'
-    'standard',
+    'prettier/react',
   ],
   parser: 'babel-eslint',
   parserOptions: {
