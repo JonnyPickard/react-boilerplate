@@ -2,8 +2,6 @@ module.exports = {
   module: {
     strictExportPresence: true,
     rules: [
-      // "url" loader works just like "file" loader but it also embeds
-      // assets smaller than specified size as data URLs to avoid requests.
       {
         test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/, /\.svg$/],
         loader: require.resolve('url-loader'),
@@ -12,7 +10,6 @@ module.exports = {
           name: 'static/media/[name].[hash:8].[ext]'
         }
       },
-      // Add postcss support
       {
         test: /\.scss$/,
         use: [
@@ -20,11 +17,11 @@ module.exports = {
             loader: require.resolve('style-loader')
           },
           {
-            loader: require.resolve('css-loader'), // 3rd load compiled css
+            loader: require.resolve('css-loader'),
             options: {
-              importLoaders: 1,
-              minimize: true,
-              sourceMap: true,
+              importLoaders: 2, // Loaders before this
+              // minimize: true,
+              // sourceMap: true,
               modules: true, // Use css modules
               camelCase: 'dashes',
               localIdentName: '[name]-[hash:4]' // TODO: remove [name] for prod
@@ -34,12 +31,13 @@ module.exports = {
             loader: require.resolve('postcss-loader'), // PostCSS
             options: {
               config: {
-                path: __dirname
+                path: '../postcss.config.js'
               }
             }
           },
           {
             loader: require.resolve('sass-loader') // SCSS
+            // Will need to add options: importPaths: here if using resolvers
           }
         ]
       }
