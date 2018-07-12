@@ -9,8 +9,11 @@
     "storybook": "start-storybook -p 6006 -s node_modules/modern-normalize",
     "build-storybook": "build-storybook",
     "preinstall": "node scripts/npm/preinstall.js",
-    "eslint-fix": "eslint . --fix",
-    "create-component": "create-component -c config/component-generator/cct.config.js && yarn eslint-fix"
+    "create-component": "create-component -c config/component-generator/cct.config.js && git add . && yarn lint-staged",
+    "publish-components": "lerna publish --since"
+  },
+  "lint-staged": {
+    "*.js": ["eslint --fix"]
   },
   "dependencies": {
     "@storybook/addon-actions": "^3.4.8",
@@ -57,6 +60,7 @@
     "jest": "23.1.0",
     "jest-cli": "23.1.0",
     "jsdom": "11.9.0",
+    "lint-staged": "^7.2.0",
     "modern-normalize": "^0.5.0",
     "node-sass": "4.9.0",
     "normalize.css": "8.0.0",
