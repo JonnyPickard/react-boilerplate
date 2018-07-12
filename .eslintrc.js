@@ -34,6 +34,8 @@ module.exports = {
     'react/jsx-uses-vars': 'error'
   },
   globals: {
+    describe: true,
+    it: true,
     expect: true,
     jest: true,
     mount: true,

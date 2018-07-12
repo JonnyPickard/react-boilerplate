@@ -4,8 +4,6 @@ module.exports = componentName => `\
 // @flow
 
 import React, { PureComponent } from 'react';
-import type { Element } from 'react';
-
 import classNames from 'classnames';
 
 type Props = {

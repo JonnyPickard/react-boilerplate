@@ -5,7 +5,8 @@
     "storybook": "start-storybook -p 6006 -s node_modules/modern-normalize",
     "build-storybook": "build-storybook",
     "preinstall": "node scripts/npm/preinstall.js",
-    "create-component": "create-component -c config/component-generator/cct.config.js"
+    "eslint-fix": "eslint . --fix",
+    "create-component": "create-component -c config/component-generator/cct.config.js && yarn eslint-fix"
   },
   "dependencies": {
     "@storybook/addon-actions": "^3.4.8",
