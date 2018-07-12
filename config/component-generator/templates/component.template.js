@@ -18,6 +18,8 @@ type Props = {
  * ${componentName} Component
  */
 class ${componentName} extends PureComponent<Props> {
+  static displayName = '${componentName}';
+  
   /**
    * Render
    * @return {Element<*>} JSX
