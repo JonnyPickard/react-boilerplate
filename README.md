@@ -11,4 +11,4 @@
 | Linting js                | eslint                          |
 | Linting styles            | stylelint                       |
 | Component generator       | create-component-template       |
-| Package manager           | yarn workspaces                 |
+| Package management        | yarn workspaces/ lerna          |
