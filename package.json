@@ -2,7 +2,7 @@
   "name": "component-library",
   "scripts": {
     "start": "yarn && yarn storybook",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 6006 -s node_modules/modern-normalize",
     "build-storybook": "build-storybook",
     "preinstall": "node scripts/npm/preinstall.js",
     "create-component": "create-component -c config/component-generator/cct.config.js"
@@ -52,6 +52,7 @@
     "jest": "23.1.0",
     "jest-cli": "23.1.0",
     "jsdom": "11.9.0",
+    "modern-normalize": "^0.5.0",
     "node-sass": "4.9.0",
     "normalize.css": "8.0.0",
     "postcss-flexbugs-fixes": "3.2.0",
