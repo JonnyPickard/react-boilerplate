@@ -1,9 +1,19 @@
 {
   "name": "component-library",
   "private": true,
+  "license": "MIT",
+  "author": "Jonny Pickard",
   "workspaces": [
     "src/components/*"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonnyPickard/react-component-lib-boilerplate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JonnyPickard/react-component-lib-boilerplate/issues"
+  },
+  "homepage": "https://github.com/JonnyPickard/react-component-lib-boilerplate#readme",
   "scripts": {
     "start": "yarn && yarn storybook",
     "storybook": "start-storybook -p 6006 -s node_modules/modern-normalize",
@@ -60,6 +70,7 @@
     "jest": "23.1.0",
     "jest-cli": "23.1.0",
     "jsdom": "11.9.0",
+    "lerna": "^2.11.0",
     "lint-staged": "^7.2.0",
     "modern-normalize": "^0.5.0",
     "node-sass": "4.9.0",
@@ -79,9 +90,5 @@
     "url-loader": "0.6.2",
     "webpack": "3.8.1",
     "webpack-dev-server": "2.9.4"
-  },
-  "license": "MIT",
-  "devDependencies": {
-    "lerna": "^2.11.0"
   }
 }
