@@ -20,8 +20,6 @@ module.exports = {
             loader: require.resolve('css-loader'),
             options: {
               importLoaders: 2, // Loaders before this
-              // minimize: true,
-              // sourceMap: true,
               modules: true, // Use css modules
               camelCase: 'dashes',
               localIdentName: '[name]-[hash:4]' // TODO: remove [name] for prod
