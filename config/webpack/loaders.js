@@ -31,7 +31,7 @@ module.exports = {
             loader: require.resolve('postcss-loader'), // PostCSS
             options: {
               config: {
-                path: '../postcss.config.js'
+                path: 'config/postcss.config.js'
               }
             }
           },
