@@ -5,6 +5,7 @@
 .*/src/.*
 
 [options]
+module.name_mapper='^@jonnypickardjs/\1' -> '<PROJECT_ROOT>/src/components'
 module.name_mapper='.*\.(scss|svg)$' -> '<PROJECT_ROOT>/config/flow/NotJSModuleStub.js'
 module.name_mapper='^\(.*\)' -> '<PROJECT_ROOT>/\1'
 module.name_mapper='^\(.*\)' -> '<PROJECT_ROOT>/src/\1'

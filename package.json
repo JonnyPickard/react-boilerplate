@@ -1,5 +1,9 @@
 {
   "name": "component-library",
+  "private": true,
+  "workspaces": [
+    "src/components/*"
+  ],
   "scripts": {
     "start": "yarn && yarn storybook",
     "storybook": "start-storybook -p 6006 -s node_modules/modern-normalize",

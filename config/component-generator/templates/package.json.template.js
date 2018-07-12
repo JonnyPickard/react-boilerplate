@@ -1,6 +1,6 @@
 module.exports = componentName => `\
 {
-  "name": "${componentName}",
+  "name": "@jonnypickardjs/${componentName}",
   "description": "Presentational",
   "version": "0.0.0",
   "main": "./index.js",
